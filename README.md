@@ -1,3 +1,4 @@
+
 # Star Wars Api
 
 Esta API realiza o cadastro, lista, busca, remove os planetas, e mostra em quais filmes eles aparecem no Mundo de Star Wars. 
@@ -24,11 +25,13 @@ Esta API realiza o cadastro, lista, busca, remove os planetas, e mostra em quais
 
 **Cadastro do Planeta** </br></br>
 raw - (json) </br>
-{ </br>
-    "Planeta": "Alderaan", </br>
-    "Clima": "temperate", </br>
-    "Terreno": "grasslands, mountains" </br>
-} </br> 
+```json
+{ 
+    "Planeta": "Alderaan", 
+    "Clima": "temperate", 
+    "Terreno": "grasslands, mountains" 
+}
+```
 
 **Retorno Sucesso** </br>
 Cadastro realizado com sucesso.(O Mestre Yoda retorna):
@@ -38,14 +41,16 @@ Status: 201 Created
 body - (json) </br>
 Cadastrado com sucesso, o planeta foi!
 
-{ </br>
+```json
+{ 
 _id: 60a254032e1ff518a7079b59, </br>
 Planeta: 'Alderaan', </br>
 Clima: 'temperate', </br>
 Terreno: 'grasslands, mountains', </br>
 Filmes: '2', </br>
-__v: 0 </br>
-} </br></br>
+__v: 0 
+}
+```
 
 **Retorno Erro** </br>
 Cadastro realizado em duplucidade.(O Mestre Yoda retorna): 

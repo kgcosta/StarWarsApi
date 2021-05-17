@@ -41,11 +41,11 @@ Status: 201 Created
 body - (json) </br>
 ```json
 { 
-_id: 60a254032e1ff518a7079b59, </br>
-Planeta: 'Alderaan', </br>
-Clima: 'temperate', </br>
-Terreno: 'grasslands, mountains', </br>
-Filmes: '2', </br>
+_id: 60a254032e1ff518a7079b59, 
+Planeta: 'Alderaan', 
+Clima: 'temperate', 
+Terreno: 'grasslands, mountains', 
+Filmes: '2', 
 __v: 0 
 }
 ```

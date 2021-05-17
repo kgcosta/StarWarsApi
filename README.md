@@ -41,12 +41,12 @@ Status: 201 Created
 body - (json) </br>
 ```json
 { 
-"_id": "60a254032e1ff518a7079b59", 
-"Planeta": "Alderaan", 
-"Clima": "temperate", 
-"Terreno": "grasslands, mountains", 
-"Filmes":"2", 
-"__v": "0" 
+    "_id": "60a254032e1ff518a7079b59", 
+    "Planeta": "Alderaan", 
+    "Clima": "temperate", 
+    "Terreno": "grasslands, mountains", 
+    "Filmes":"2", 
+    "__v": 0 
 }
 ```
 
@@ -140,12 +140,12 @@ Status: 200 Ok
 body - (json) </br>
 ```json
 { 
-        "_id": "60a25c7a000b221b817ff459",
-        "Planeta": "Yavin IV",
-        "Clima": "temperate, tropical",
-        "Terreno": "jungle, rainforests",
-        "Filmes": "1",
-        "__v": 0
+    "_id": "60a25c7a000b221b817ff459",
+    "Planeta": "Yavin IV",
+    "Clima": "temperate, tropical",
+    "Terreno": "jungle, rainforests",
+    "Filmes": "1",
+    "__v": 0
 }
 ```
  

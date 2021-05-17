@@ -41,12 +41,12 @@ Status: 201 Created
 body - (json) </br>
 ```json
 { 
-_id: 60a254032e1ff518a7079b59, 
-Planeta: 'Alderaan', 
-Clima: 'temperate', 
-Terreno: 'grasslands, mountains', 
-Filmes: '2', 
-__v: 0 
+"_id": "60a254032e1ff518a7079b59", 
+"Planeta": "Alderaan", 
+"Clima": "temperate", 
+"Terreno": "grasslands, mountains", 
+"Filmes":"2", 
+"__v": "0" 
 }
 ```
 
@@ -220,6 +220,6 @@ Status: 500 Internal Server Error
 body - (json) 
 ```json
 {
-    "message: "Deletado não foi!"
+    "message": "Deletado não foi!"
 }
 ```

@@ -217,7 +217,7 @@ Erro ao deletar o planeta. (O Mestre Yoda retorna):
 
 Status: 500 Internal Server Error
 
-body - (json) </br>
+body - (json) 
 ```json
 {
     "message: "Deletado não foi!"

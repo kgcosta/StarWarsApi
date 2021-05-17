@@ -25,17 +25,17 @@ class PlanetController {
 
       // Realizar o insert no MongoDB
       planet.save().then(() => {
-          res.status(201).send("Cadastrado com sucesso, o planeta foi! \n\n\n" +planet);
+          res.status(201).send(planet);
       }).catch(err => {
         // Broken E11000 duplicate key - Se o planeta estiver em duplicidade retorna o erro. 
         if(err.code == 11000) {
           //console.log(err);
-          res.status(400).send("Já existe o planeta, cadastrado não foi!")
+          res.status(400).json({"error_message": "Já existe o planeta, cadastrado não foi!"});
         };
       });
     
     } catch (error) {
-      res.status(500).send("Cadastrar planeta, possível não foi!!");
+      res.status(500).json({"error_message":"Cadastrar planeta, possível não foi!!"});
     };
   };
 
@@ -43,7 +43,7 @@ class PlanetController {
     
     planetModel.find((err, planets) => {
       if (err){
-        res.status(500).send("Possível não foi, planeta achar!");
+        res.status(500).json({"error_message":"Possível não foi, planeta achar!"});
       };
         res.json(planets);
     });
@@ -52,7 +52,7 @@ class PlanetController {
   async getPlanetById(req, res) {
     planetModel.findById(req.params.id, (err, planet) => {
       if (err) {
-        res.status(500).send("Possível não foi, planeta achar!");
+        res.status(500).json({"error_message": "Possível não foi, planeta achar!"});
       };
         res.json(planet);
     });
@@ -61,7 +61,7 @@ class PlanetController {
   async getPlanetByName(req,res) { 
     planetModel.findOne({Planeta: req.params.name}, (err, planet) => {
       if (err) {
-        res.status(500).send("Possível não foi, planeta achar!");
+        res.status(500).json({"error_message":"Possível não foi, planeta achar!"});
       };
         res.json(planet);
     });
@@ -70,9 +70,9 @@ class PlanetController {
   async deletePlanetByName(req,res) {
     planetModel.deleteOne({Planeta: req.params.name}, (err, planet) => { ;
       if (err) {
-        res.status(500).send("Deletado não foi!");
+        res.status(500).json({"error_message":"Deletado não foi!"});
       };
-        res.json("Sucesso é. Deletado o planeta!");
+        res.json({"message":"Sucesso é. Deletado o planeta!"});
     });    
   };
 };

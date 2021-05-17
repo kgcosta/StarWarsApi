@@ -39,8 +39,6 @@ Cadastro realizado com sucesso.(O Mestre Yoda retorna):
 Status: 201 Created
 
 body - (json) </br>
-Cadastrado com sucesso, o planeta foi!
-
 ```json
 { 
 _id: 60a254032e1ff518a7079b59, </br>
@@ -52,13 +50,18 @@ __v: 0
 }
 ```
 
+
 **Retorno Erro** </br>
 Cadastro realizado em duplucidade.(O Mestre Yoda retorna): 
 
 Status: 400 Bad Request
 
 body - (json) </br>
-Já existe o planeta, cadastrado não foi!
+```json
+{
+    "error_message": "Já existe o planeta, cadastrado não foi!"
+}
+```
 
 **Retorno Erro** </br>
 Erro ao realizar o cadastro.(O Mestre Yoda retorna):
@@ -66,7 +69,11 @@ Erro ao realizar o cadastro.(O Mestre Yoda retorna):
 Status: 500 Internal Server Error
 
 body - (json) </br>
-Cadastrar planeta, possível não foi!!
+```json
+{
+    "error_message": "Cadastrar planeta, possível não foi!!"
+}
+```
 
 ## Listar Planetas
 
@@ -79,32 +86,34 @@ Busca realizada com sucesso.(O Mestre Yoda retorna):
 Status: 200 Ok
 
 body - (json) </br>
-[</br>
+```json
+[
     {
-        "_id": "60a138a438f8b23a1bbd8e6f",</br>
-        "Planeta": "Felucia",</br>
-        "Clima": "hot, humid",</br>
-        "Terreno": "fungus forests",</br>
-        "Filmes": "1",</br>
-        "__v": 0</br>
-    },</br>
-    {</br>
-        "_id": "60a254032e1ff518a7079b59",</br>
-        "Planeta": "Alderaan",</br>
-        "Clima": "temperate",</br>
-        "Terreno": "grasslands, mountains",</br>
-        "Filmes": "2",</br>
-        "__v": 0</br>
-    },</br>
-    {</br>
-        "_id": "60a25c7a000b221b817ff459",</br>
-        "Planeta": "Yavin IV",</br>
-        "Clima": "temperate, tropical",</br>
-        "Terreno": "jungle, rainforests",</br>
-        "Filmes": "1",</br>
-        "__v": 0</br>
-    }</br>
-] </br> 
+        "_id": "60a138a438f8b23a1bbd8e6f",
+        "Planeta": "Felucia",
+        "Clima": "hot, humid",
+        "Terreno": "fungus forests",
+        "Filmes": "1",
+        "__v": 0
+    },
+    {
+        "_id": "60a254032e1ff518a7079b59",
+        "Planeta": "Alderaan",
+        "Clima": "temperate",
+        "Terreno": "grasslands, mountains",
+        "Filmes": "2",
+        "__v": 0
+    },
+    {
+        "_id": "60a25c7a000b221b817ff459",
+        "Planeta": "Yavin IV",
+        "Clima": "temperate, tropical",
+        "Terreno": "jungle, rainforests",
+        "Filmes": "1",
+        "__v": 0
+    }
+] 
+```
 
 **Retorno Erro** </br>
 Erro ao realizar a busca. (O Mestre Yoda retorna):
@@ -112,7 +121,11 @@ Erro ao realizar a busca. (O Mestre Yoda retorna):
 Status: 500 Internal Server Error
 
 body - (json) </br>
-Possível não foi, planeta achar!
+```json
+{
+    "error_message": "Possível não foi, planeta achar!"
+}
+```
 
 ## Buscar Planeta Pelo ID
 
@@ -125,14 +138,16 @@ Busca realizada com sucesso.(O Mestre Yoda retorna):
 Status: 200 Ok
 
 body - (json) </br>
-{ </br>
-        "_id": "60a25c7a000b221b817ff459",</br>
-        "Planeta": "Yavin IV",</br>
-        "Clima": "temperate, tropical",</br>
-        "Terreno": "jungle, rainforests",</br>
-        "Filmes": "1",</br>
-        "__v": 0</br>
+```json
+{ 
+        "_id": "60a25c7a000b221b817ff459",
+        "Planeta": "Yavin IV",
+        "Clima": "temperate, tropical",
+        "Terreno": "jungle, rainforests",
+        "Filmes": "1",
+        "__v": 0
 }
+```
  
 **Retorno Erro** </br>
 Erro ao realizar a busca. (O Mestre Yoda retorna):
@@ -140,8 +155,11 @@ Erro ao realizar a busca. (O Mestre Yoda retorna):
 Status: 500 Internal Server Error
 
 body - (json) </br>
-Possível não foi, planeta achar!
-
+```json
+{
+    "error_message": "Possível não foi, planeta achar!"
+}
+```
 
 ## Buscar Planeta Pelo Nome
 
@@ -154,14 +172,16 @@ Busca realizada com sucesso.(O Mestre Yoda retorna):
 Status: 200 Ok
 
 body - (json) </br>
-{ </br>
-    "_id": "60a260e1000b221b817ff45b", </br>
-    "Planeta": "Cato Neimoidia", </br>
-    "Clima": "temperate, moist", </br>
-    "Terreno": "mountains, fields, forests, rock arches", </br>
-    "Filmes": "1", </br>
-    "__v": 0 </br>
-} </br> 
+```json
+{ 
+    "_id": "60a260e1000b221b817ff45b", 
+    "Planeta": "Cato Neimoidia", 
+    "Clima": "temperate, moist", 
+    "Terreno": "mountains, fields, forests, rock arches", 
+    "Filmes": "1", 
+    "__v": 0 
+} 
+```
  
 **Retorno Erro** </br>
 Erro ao realizar a busca. (O Mestre Yoda retorna):
@@ -169,7 +189,11 @@ Erro ao realizar a busca. (O Mestre Yoda retorna):
 Status: 500 Internal Server Error
 
 body - (json) </br>
-Possível não foi, planeta achar!
+```json
+{
+    "error_message": "Possível não foi, planeta achar!"
+}
+```
 
 ## Deletar Planeta
 
@@ -182,8 +206,11 @@ Sucesso ao deletear o planeta.(O Mestre Yoda retorna):
 Status: 200 Ok
 
 body - (json) </br>
-"Sucesso é. Deletado o planeta!"
-
+```json
+{
+    "message": "Sucesso é. Deletado o planeta!"
+}
+```
  
 **Retorno Erro** </br>
 Erro ao deletar o planeta. (O Mestre Yoda retorna):
@@ -191,4 +218,8 @@ Erro ao deletar o planeta. (O Mestre Yoda retorna):
 Status: 500 Internal Server Error
 
 body - (json) </br>
-Deletado não foi!
+```json
+{
+    "message: "Deletado não foi!"
+}
+```
